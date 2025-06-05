@@ -1,0 +1,267 @@
+.modal-overlay {
+  position: fixed; /* fix the modal to the window */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Translucent Dark Background */
+  display: flex;
+  justify-content: center; /* center horizontally the modal's content */
+  align-items: center;   /* center vertically the modal's content */
+  z-index: 1000; /* make sure it is over other components */
+}
+
+#modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative; /* allow to position the closing button */
+  width: 90%; /* responsive width */
+  max-width: 500px; /* max width */
+  box-sizing: border-box; /* include border and padding on the width and height */
+}
+
+#modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#modal-content form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+#modal-content form input {
+  width: calc(100% - 20px); /* full width minus padding */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end; /* align buttons to the right */
+  gap: 10px; /* gap between buttons */
+  margin-top: 20px;
+}
+
+.modal-actions.align-center {
+  justify-content: center;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.modal-actions .cancel {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.modal-actions .cancel:hover {
+  background-color: #e0e0e0;
+}
+
+.modal-actions .save {
+  background-color: #007bff;
+  color: white;
+}
+
+.modal-actions .save:hover {
+  background-color: #0056b3;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #aaa;
+  line-height: 1; /*  ajust height to center the 'x' */
+}
+
+.close-button:hover {
+  color: #666;
+}
+
+#confirmation-modal-content { /* Use a specific ID for this modal's content */
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 90%;
+  max-width: 400px; /* A bit smaller for confirmation */
+  box-sizing: border-box;
+  text-align: center; /* Center the text for a confirmation */
+}
+
+#confirmation-modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#confirmation-modal-content p {
+  margin-bottom: 25px;
+  color: #666;
+  line-height: 1.5;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+/* Container for the whole application */
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Takes full viewport height */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Card-like container for the main content */
+#card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  width: 100%;
+  max-width: 900px; /* Max width for the card */
+  box-sizing: border-box;
+}
+
+/* Header section inside the card */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.header-h2 {
+  margin: 0;
+  color: #007bff;
+  font-size: 1.8em;
+}
+
+/* Add Department Button */
+#add-btn {
+  background-color: #28a745; /* Green for add */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.2s ease;
+}
+
+#add-btn:hover {
+  background-color: #218838;
+}
+
+/* Table Container */
+#departments-table-container {
+  overflow-x: auto; /* Allows table to scroll horizontally if content overflows */
+}
+
+/* Departments Table */
+#departments-table {
+  width: 100%;
+  border-collapse: collapse; /* Removes double borders */
+  margin-top: 20px;
+}
+
+#departments-table th,
+#departments-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+#departments-table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+  color: #555;
+}
+
+#departments-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Zebra striping */
+}
+
+#departments-table tbody tr:hover {
+  background-color: #f1f1f1; /* Hover effect */
+}
+
+/* Table Action Buttons */
+.edit-btn, .delete-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-right: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.edit-btn {
+  background-color: #007bff; /* Blue for edit */
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn {
+  background-color: #dc3545; /* Red for delete */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Loading and Error Messages */
+.loading-message {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.1em;
+  color: #007bff;
+}
+
+.error-message {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.1em;
+  color: #dc3545;
+  background-color: #ffe0e0;
+  border: 1px solid #dc3545;
+  border-radius: 5px;
+  margin: 20px 0;
+}
