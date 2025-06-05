@@ -4,6 +4,9 @@
 
 This is the frontend of a web application for department management, built with **React** and **Vite**. It allows users to view, add, edit, and delete department information in an intuitive and efficient way, communicating with a backend API (developed with Spring Boot). This serves as part of my Full Stack Development learning process and the creation of a portfolio to support my growth as a Software Engineer, integrating both Development and QA.
 
+* **Backend (API Application):** You can find the code and instructions for the backend part (built with Spring Boot) in the following repository:
+    * [**`springboot-department-api`**](<https://github.com/abadillagodinez/springboot-department-api>)
+
 ## Table of Contents
 
 * [Features](#features)
@@ -101,11 +104,14 @@ If you have any questions or suggestions, feel free to reach out:
 
 ---
 
-# 🇪🇸: Gestión de Departamentos (Department Management) - Learning Practice for Porfolio- Frontend
+# 🇪🇸: Gestión de Departamentos - Práctica de aprendizaje para portafolio: Frontend
 
 ---
 
 Este es el frontend de una aplicación web para la gestión de departamentos, construida con **React** y **Vite**. Permite visualizar, añadir, editar y eliminar información de departamentos de manera intuitiva y eficiente, comunicándose con una API de backend (desarrollada con Spring Boot). Esto como proceso de Aprendizaje de Desarrollo Full Stack. Así como la creación de un portafolio que me ayude a crecer como Software Engineer integrando Desarrollo y QA.
+
+* **Backend (Aplicación API):** Puedes encontrar el código y las instrucciones para el backend (construido con Spring Boot) en el siguiente repositorio:
+    * [**`springboot-department-api`**](<https://github.com/abadillagodinez/springboot-department-api>)
 
 ## Tabla de Contenidos
 
